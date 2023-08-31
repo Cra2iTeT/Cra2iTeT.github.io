@@ -12,7 +12,7 @@
 
     
     <title>
-        个人简介 |
+        标签: 简历 |
         
         Cra2iTeT的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,15 +23,13 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="周朝勇 📧  微信： Cra2i00 📫  邮箱： 2373506982@qq.com ¶教育背景  	         石家庄铁道大学                   2020.09——2020.06       ¶实习经历  	         北京京天威科技发展有限公司                   后端开发                   2023.06——2023.08">
+    <meta name="description" content="Cra2iTeT的个人网站">
 <meta property="og:type" content="website">
-<meta property="og:title" content="个人简介">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:title" content="Cra2iTeT的个人网站">
+<meta property="og:url" content="http://example.com/tags/%E7%AE%80%E5%8E%86/index.html">
 <meta property="og:site_name" content="Cra2iTeT的个人网站">
-<meta property="og:description" content="周朝勇 📧  微信： Cra2i00 📫  邮箱： 2373506982@qq.com ¶教育背景  	         石家庄铁道大学                   2020.09——2020.06       ¶实习经历  	         北京京天威科技发展有限公司                   后端开发                   2023.06——2023.08">
+<meta property="og:description" content="Cra2iTeT的个人网站">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-30T06:58:34.000Z">
-<meta property="article:modified_time" content="2023-08-30T10:36:16.707Z">
 <meta property="article:author" content="Cra2iTeT">
 <meta name="twitter:card" content="summary">
     
@@ -108,7 +106,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/banner.jpg" data-sizes="auto" alt="个人简介" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -116,12 +114,16 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>个人简介</h1></a>
+                        <a href="/" id="logo"><h1>标签</h1></a>
                     
                 
             </div>
             
                 
+                
+                    <h2 id="subtitle-wrap">
+                        <a href="/" id="subtitle">简历</a>
+                    </h2>
                 
             
         </div>
@@ -165,118 +167,58 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main"><article id="page-" class="h-entry article article-type-page"
-         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-    <div class="article-inner">
-        <div class="article-meta">
-            <div class="article-date wow slideInLeft">
-    <a href="/about/index.html" class="article-date-link">
-        <time datetime="2023-08-30T06:58:34.000Z"
-              itemprop="datePublished">2023-08-30</time>
-    </a>
-</div>
-
+                <section id="main">
+    <div class="archives-outer-wrap wow fadeInUp">
+        <div class="tag-wrap">
             
-
-        </div>
-        <div class="hr-line"></div>
-        
-
-        <div class="e-content article-entry" itemprop="articleBody">
-            
-                <h1>周朝勇</h1>
-<p>📧  微信： Cra2i00</p>
-<p>📫  邮箱： <a href="mailto:2373506982@qq.com">2373506982@qq.com</a></p>
-<h2 id="教育背景"><a class="header-anchor" href="#教育背景">¶</a>教育背景</h2>
-<div style="display: grid;grid-template-columns: repeat(2, 1fr);">
-	<div>
-        石家庄铁道大学
-    </div>
-    <div style="text-align: right">
-        2020.09——2020.06
-    </div>
-</div>
-<h2 id="实习经历"><a class="header-anchor" href="#实习经历">¶</a>实习经历</h2>
-<div style="display: grid;grid-template-columns: repeat(3, 1fr);">
-	<div>
-        北京京天威科技发展有限公司
-    </div>
-    <div>
-        后端开发
-    </div>
-    <div style="text-align: right">
-        2023.06——2023.08
-    </div>
-</div>
-<h2 id="项目经历"><a class="header-anchor" href="#项目经历">¶</a>项目经历</h2>
-<div style="display: grid;grid-template-columns: repeat(3, 1fr);">
-	<div>
-        邀新抽奖系统
-    </div>
-    <div>
-        后端开发
-    </div>
-    <div style="text-align: right">
-        2022.09——2022.10
-    </div>
-</div>
-<p>项目描述：用户可以查看并参与指定抽奖活动、邀请用户以获得更多抽奖机会，获奖用户生成订单信息，以及基础的后台管理，如活动和奖品的上下架、用户管理。</p>
-<ol>
-<li>使用RabbitMQ死信队列存储中奖信息，接口响应速度提升20%。使用Kafka存储线上日志消息</li>
-<li>定时任务预热存储抽奖活动与奖品信息，减轻MySQL数据库资源访问压力。</li>
-<li>双重检查Redisson分布式锁，解决超额中奖问题同时提高接口吞吐量，TPS提高1000。</li>
-<li>本地接口访问限流，随机 + 令牌桶双重限流模式，避免大量请求涌入，降低接口访问压力。</li>
-<li>邀请用户获得更多抽奖机会，成功邀请用户后重置抽奖次数并提升用户的中奖概率，提高曝光率。</li>
-<li>限制用户接受单场次抽奖邀请次数，设置邀请权重上限，避免恶意互刷提高中奖概率。</li>
-<li>后台自动判定用户抽奖行为并自行添加至黑名单，避免通过非法途径恶意提高个人中奖概率。</li>
-<li>使用Nginx进行反向代理和前端资源部署、Docker容器部署后端资源。</li>
-</ol>
-<div style="display: grid;grid-template-columns: repeat(3, 1fr);">
-	<div>
-        简单RPC框架
-    </div>
-    <div>
-        开发
-    </div>
-    <div style="text-align: right">
-        2022.12——2023.01
-    </div>
-</div>
-<p>项目描述：一款基于Netty的高性能RPC框架，实现了动态服务注册与发现，有多种负载均衡策略，提供健康检测和多种结点淘汰策略。</p>
-<ol>
-<li>负载均衡实现，添加本地缓存，提供随机、轮询、权重响应优先的多重负载均衡算法实现。</li>
-<li>健康检测，客户端定时发送心跳请求，注册中心提供定期删除、惰性删除、混合删除的结点淘汰策略。</li>
-<li>JDK动态代理与反射，扫描使用自定义注解的业务类，加入到IOC容器中管理</li>
-<li>服务注册与发现，使用Server作为注册中心，转发Client的请求。自定义序列化协议，解决黏包半包问题</li>
-</ol>
-<h2 id="自我评价"><a class="header-anchor" href="#自我评价">¶</a>自我评价</h2>
-<p>有良好的团队合作和责任意识，抗压能力强，热爱技术学习；有较强的解决问题和适应能力，自学能力较强。</p>
-
+                <div class="archives-tag-list-item">
+                    <a class="archives-tag-list-link" href="/tags/简历/">简历</a>
+                </div>
             
         </div>
-        <footer class="article-footer">
-            <a data-url="http://example.com/about/index.html" data-id="cllyuc2vi0002fgkq1wnl2x0c" data-title="个人简介"
-               class="article-share-link">分享</a>
+        <div class="category-wrap">
             
+                <div class="archives-category-list-item">
+                    <a class="archives-category-list-link" href="/categories/个人经历/">个人经历</a>
+                </div>
             
-            
-            
-
-        </footer>
-    </div>
-    
+        </div>
         
-
+        
+            
+            
+                
     
-</article>
+    <section class="archives-wrap wow fadeInUp">
+        <div class="archive-year-wrap">
+            <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+            <ul>
+                
+                <li class="archive-article">
+    <div class="archive-article-date-wrap">
+        <a href="/2023/08/30/My-Introduction/">
+            <time class="dt-published" datetime="2023-08-30T06:58:34.000Z"
+                  itemprop="datePublished">08-30</time>
+        </a>
+    </div>
+    <div class="archive-article-title-wrap">
+        
+            
+                <a class="archive-article-title" href="/2023/08/30/My-Introduction/">简历(秋招版)</a>
+            
+        
+    </div>
+</li>
 
-
-
-
-
-
-
-
+                
+                
+            </ul>
+        </div>
+    </section>
+    
+    </div>
 
 
 
