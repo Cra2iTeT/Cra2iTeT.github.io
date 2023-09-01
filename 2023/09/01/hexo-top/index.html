@@ -12,7 +12,7 @@
 
     
     <title>
-        Hexo图片无法显示问题解决 |
+        Hexo文章置顶功能实现（ruimu） |
         
         Cra2iTeT的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,15 +23,15 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份&#x2F;月份&#x2F;时间&#x2F;文件名（默认），是在_config.yml中配置的 1permalink: :year&#x2F;:month&#x2F;:day&#x2F;:ti">
+    <meta name="description" content="Hexo本身没有置顶功能，但是可以手动添加，以我当前使用的主题ruimu为例。   修改 \node_modules\hexo-generator-index\lib 目录下的 generator.js文件   注释掉 1posts.data.sort((a, b) &#x3D;&gt; (b.sticky || 0) - (a.sticky || 0)); 添加下列代码 12345678910111213">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo图片无法显示问题解决">
-<meta property="og:url" content="http://cra2itet.github.io/2023/09/01/hexo-theme-ruime-img/index.html">
+<meta property="og:title" content="Hexo文章置顶功能实现（ruimu）">
+<meta property="og:url" content="http://cra2itet.github.io/2023/09/01/hexo-top/index.html">
 <meta property="og:site_name" content="Cra2iTeT的个人网站">
-<meta property="og:description" content="使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份&#x2F;月份&#x2F;时间&#x2F;文件名（默认），是在_config.yml中配置的 1permalink: :year&#x2F;:month&#x2F;:day&#x2F;:ti">
+<meta property="og:description" content="Hexo本身没有置顶功能，但是可以手动添加，以我当前使用的主题ruimu为例。   修改 \node_modules\hexo-generator-index\lib 目录下的 generator.js文件   注释掉 1posts.data.sort((a, b) &#x3D;&gt; (b.sticky || 0) - (a.sticky || 0)); 添加下列代码 12345678910111213">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-01T07:40:43.000Z">
-<meta property="article:modified_time" content="2023-09-01T07:49:37.660Z">
+<meta property="article:modified_time" content="2023-09-01T08:01:50.258Z">
 <meta property="article:author" content="Cra2iTeT">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -109,7 +109,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/banner.jpg" data-sizes="auto" alt="Hexo图片无法显示问题解决" class="lazyload">
+        <img data-src="/images/banner-stdu.jpg" data-sizes="auto" alt="Hexo文章置顶功能实现（ruimu）" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -117,7 +117,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>Hexo图片无法显示问题解决</h1></a>
+                        <a href="/" id="logo"><h1>Hexo文章置顶功能实现（ruimu）</h1></a>
                     
                 
             </div>
@@ -166,12 +166,12 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main"><article id="post-hexo-theme-ruime-img" class="h-entry article article-type-post"
+                <section id="main"><article id="post-hexo-top" class="h-entry article article-type-post"
          itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <div class="article-inner">
         <div class="article-meta">
             <div class="article-date wow slideInLeft">
-    <a href="/2023/09/01/hexo-theme-ruime-img/" class="article-date-link">
+    <a href="/2023/09/01/hexo-top/" class="article-date-link">
         <time datetime="2023-09-01T07:40:43.000Z"
               itemprop="datePublished">2023-09-01</time>
     </a>
@@ -189,19 +189,31 @@
 
         <div class="e-content article-entry" itemprop="articleBody">
             
-                <p>使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份/月份/时间/文件名（默认），是在_config.yml中配置的</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
-<p>最简单的不使用插件的解决方案就是在source中新建一个资源文件夹，存放资源，插入图片是路径地址改成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/你的资源文件夹/图片.png</span><br></pre></td></tr></table></figure>
+                <p>Hexo本身没有置顶功能，但是可以手动添加，以我当前使用的主题ruimu为例。</p>
+<ol>
+<li>
+<p>修改 \node_modules\hexo-generator-index\lib 目录下的 generator.js文件</p>
+</li>
+<li>
+<p>注释掉</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">posts.<span class="property">data</span>.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> (b.<span class="property">sticky</span> || <span class="number">0</span>) - (a.<span class="property">sticky</span> || <span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+<p>添加下列代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">posts.<span class="property">data</span> = posts.<span class="property">data</span>.<span class="title function_">sort</span>(<span class="keyword">function</span> (<span class="params">a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (a.<span class="property">top</span> &amp;&amp; b.<span class="property">top</span>) &#123; <span class="comment">// 两篇文章都有top，top大的在前</span></span><br><span class="line">      <span class="keyword">if</span> (a.<span class="property">top</span> == b.<span class="property">top</span>)</span><br><span class="line">        <span class="keyword">return</span> b.<span class="property">date</span> - a.<span class="property">date</span>; <span class="comment">// 若top值一样，最新的文章在前面</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> b.<span class="property">top</span> - a.<span class="property">top</span>; <span class="comment">// top大的在前面</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (a.<span class="property">top</span> &amp;&amp; !b.<span class="property">top</span>) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (!a.<span class="property">top</span> &amp;&amp; b.<span class="property">top</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.<span class="property">date</span> - a.<span class="property">date</span>; 	<span class="comment">//都没有top标签，最新的文章在前面</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>找到 \themes\reimu\layout_partial 目录下的post.ejs，查找class为 post-meta 的标签，在标签内部添加下列代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;&lt;% <span class="keyword">if</span> (index &amp;&amp; post.<span class="property">top</span>)&#123; %&gt;置顶&lt;% &#125; %&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
             
         </div>
         <footer class="article-footer">
-            <a data-url="http://cra2itet.github.io/2023/09/01/hexo-theme-ruime-img/" data-id="clm0arjl2000c3gkq6ggt9v3o" data-title="Hexo图片无法显示问题解决"
+            <a data-url="http://cra2itet.github.io/2023/09/01/hexo-top/" data-id="clm0bin3s0007ickqgea4hw7m" data-title="Hexo文章置顶功能实现（ruimu）"
                class="article-share-link">分享</a>
             
-                <a href="/2023/09/01/hexo-theme-ruime-img/#comments" class="article-comment-link">
-                    <span class="post-comments-count valine-comment-count" data-xid="/2023/09/01/hexo-theme-ruime-img/"
+                <a href="/2023/09/01/hexo-top/#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/2023/09/01/hexo-top/"
                           itemprop="commentCount"></span>
                     留言
                 </a>
@@ -218,12 +230,28 @@
         
     <nav id="article-nav" class="wow fadeInUp">
         
+            <div class="article-nav-link-wrap article-nav-link-left">
+                
+                    
+                    
+                        <img data-src="/covers/44f07132d1ffcfdb40a8e55c3d3e4c0.jpg" data-sizes="auto" alt="Hexo图片无法显示问题解决" class="lazyload">
+                    
+                
+                <a href="/2023/09/01/hexo-img/"></a>
+                <div class="article-nav-caption">前一篇</div>
+                <h3 class="article-nav-title">
+                    
+                        Hexo图片无法显示问题解决
+                    
+                </h3>
+            </div>
+        
         
             <div class="article-nav-link-wrap article-nav-link-right">
                 
                     
                     
-                        <img data-src="/covers/avatar.png" data-sizes="auto" alt="简历(秋招版)" class="lazyload">
+                        <img data-src="/covers/c9b12382a399a3fc67211e36b8c4e6b.jpg" data-sizes="auto" alt="简历(秋招版)" class="lazyload">
                     
                 
                 <a href="/2023/08/30/My-Introduction/"></a>
@@ -267,7 +295,7 @@
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>文章</div>
-                <div class="sidebar-state-number">4</div>
+                <div class="sidebar-state-number">5</div>
             </div>
             <div class="sidebar-state-category">
                 <div>分类</div>
@@ -340,7 +368,7 @@
     <div class="widget-wrap wow fadeInRight">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 10px;">简历</a>
+            <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 10px;">简历</a>
         </div>
     </div>
 
@@ -380,10 +408,10 @@
             
                 <div>
                     <span class="icon-brush"></span>
-                    1.4k
+                    1.7k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:05
+                    00:06
                 </div>
             
             
@@ -410,7 +438,7 @@
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>文章</div>
-                <div class="sidebar-state-number">4</div>
+                <div class="sidebar-state-number">5</div>
             </div>
             <div class="sidebar-state-category">
                 <div>分类</div>
