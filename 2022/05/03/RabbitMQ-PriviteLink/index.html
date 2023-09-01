@@ -12,7 +12,7 @@
 
     
     <title>
-        归档 |
+        RabbitMQ管理页面不是私密连接解决办法 |
         
         Cra2iTeT的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,15 +23,21 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="Cra2iTeT的个人网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cra2iTeT的个人网站">
-<meta property="og:url" content="http://cra2itet.github.io/archives/index.html">
+    <meta name="description" content="我的RabbitMQ是在CentOS7.6的Docker环境中安装的，安装命令如下 123docker run -di --name myrabitt -e RABBITMQ_DEFAULT_USER&#x3D;admin  -e \RABBITMQ_DEFAULT_PASS&#x3D;admin  -p 5672:5672  -p 15672:15672 -p 25672:25672 \-p 61613:61613">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RabbitMQ管理页面不是私密连接解决办法">
+<meta property="og:url" content="http://cra2itet.github.io/2022/05/03/RabbitMQ-PriviteLink/index.html">
 <meta property="og:site_name" content="Cra2iTeT的个人网站">
-<meta property="og:description" content="Cra2iTeT的个人网站">
+<meta property="og:description" content="我的RabbitMQ是在CentOS7.6的Docker环境中安装的，安装命令如下 123docker run -di --name myrabitt -e RABBITMQ_DEFAULT_USER&#x3D;admin  -e \RABBITMQ_DEFAULT_PASS&#x3D;admin  -p 5672:5672  -p 15672:15672 -p 25672:25672 \-p 61613:61613">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://cra2itet.github.io/pic/RabbitMQ-PriviteLink/2442360-20220503090728626-852146575.png">
+<meta property="og:image" content="http://cra2itet.github.io/pic/RabbitMQ-PriviteLink/2442360-20220503091528939-205844919.png">
+<meta property="article:published_time" content="2022-05-03T01:16:43.000Z">
+<meta property="article:modified_time" content="2023-09-01T07:50:28.290Z">
 <meta property="article:author" content="Cra2iTeT">
+<meta property="article:tag" content="RabbitMQ">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cra2itet.github.io/pic/RabbitMQ-PriviteLink/2442360-20220503090728626-852146575.png">
     
         <link rel="alternate" href="/atom.xml" title="Cra2iTeT的个人网站" type="application/atom+xml">
     
@@ -106,7 +112,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="RabbitMQ管理页面不是私密连接解决办法" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -114,7 +120,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>归档</h1></a>
+                        <a href="/" id="logo"><h1>RabbitMQ管理页面不是私密连接解决办法</h1></a>
                     
                 
             </div>
@@ -163,142 +169,98 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main">
-    <div class="archives-outer-wrap wow fadeInUp">
-        <div class="tag-wrap">
+                <section id="main"><article id="post-RabbitMQ-PriviteLink" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date wow slideInLeft">
+    <a href="/2022/05/03/RabbitMQ-PriviteLink/" class="article-date-link">
+        <time datetime="2022-05-03T01:16:43.000Z"
+              itemprop="datePublished">2022-05-03</time>
+    </a>
+</div>
+
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/简历/">简历</a>
-                </div>
+    <div class="article-category wow slideInLeft">
+        <a class="article-category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
+    </div>
+
+
+        </div>
+        <div class="hr-line"></div>
+        
+
+        <div class="e-content article-entry" itemprop="articleBody">
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/RabbitMQ/">RabbitMQ</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Nginx/">Nginx</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Hexo/">Hexo</a>
-                </div>
+                <p>我的RabbitMQ是在CentOS7.6的Docker环境中安装的，安装命令如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -di --name myrabitt -e RABBITMQ_DEFAULT_USER=admin  -e \</span><br><span class="line">RABBITMQ_DEFAULT_PASS=admin  -p 5672:5672  -p 15672:15672 -p 25672:25672 \</span><br><span class="line">-p 61613:61613 -p 1883:1883 rabbitmq:management</span><br></pre></td></tr></table></figure>
+<p>安装完成后防火墙开放15672端口，打开RabbtiMQ的管理页面就弹出下图上</p>
+<p><img src="/pic/RabbitMQ-PriviteLink/2442360-20220503090728626-852146575.png" alt=""></p>
+<p>首先能访问到RabbitMQ的页面说明安装是没问题的，但是就是进不去页面，提示不是私密连接需要登录，可是我输入安装命令中的账号密码还有默认账号密码guest guest都没有办法登录，一直卡在这里，百度只有一篇帖子和这个问题有关，但是他是通过重新安装解决的，他提到了创建用户，于是我就想是不是用户没有创建成功导致的，进入docker容器输入命令查看用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it c_rabbit bash</span><br><span class="line">rabbitmqctl list_users</span><br></pre></td></tr></table></figure>
+<p>果然只有一个guest用户，而RabbitMQ官方只允许本机使用guest访问，所以我通过虚拟机连接的当然访问不了，添加一个用户即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl add_user username password</span><br><span class="line">rabbitmqctl  set_user_tags username administrator</span><br></pre></td></tr></table></figure>
+<p>新建用户是none权限，干脆再把权限给赋予了，再打开管理页面输入账号密码登录就好了。</p>
+<p><img src="/pic/RabbitMQ-PriviteLink/2442360-20220503091528939-205844919.png" alt=""></p>
+
             
         </div>
-        <div class="category-wrap">
+        <footer class="article-footer">
+            <a data-url="http://cra2itet.github.io/2022/05/03/RabbitMQ-PriviteLink/" data-id="clm0arjky00083gkq53ch6m2p" data-title="RabbitMQ管理页面不是私密连接解决办法"
+               class="article-share-link">分享</a>
             
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/个人经历/">个人经历</a>
-                </div>
-            
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/问题解决/">问题解决</a>
-                </div>
-            
-        </div>
-        
-        
+                <a href="/2022/05/03/RabbitMQ-PriviteLink/#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/2022/05/03/RabbitMQ-PriviteLink/"
+                          itemprop="commentCount"></span>
+                    留言
+                </a>
             
             
-                
+            
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RabbitMQ/" rel="tag">RabbitMQ</a></li></ul>
+
+
+        </footer>
+    </div>
     
-    <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-            <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-            <ul>
+        
+    <nav id="article-nav" class="wow fadeInUp">
+        
+            <div class="article-nav-link-wrap article-nav-link-left">
                 
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/09/01/hexo-theme-ruime-img/">
-            <time class="dt-published" datetime="2023-09-01T07:40:43.000Z"
-                  itemprop="datePublished">09-01</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
+                    
+                    
+                        <img data-src="/covers/avatar.png" data-sizes="auto" alt="Nginx访问静态资源404" class="lazyload">
+                    
+                
+                <a href="/2022/07/31/Nginx-static404/"></a>
+                <div class="article-nav-caption">前一篇</div>
+                <h3 class="article-nav-title">
+                    
+                        Nginx访问静态资源404
+                    
+                </h3>
+            </div>
         
-            
-                <a class="archive-article-title" href="/2023/09/01/hexo-theme-ruime-img/">Hexo图片无法显示问题解决</a>
-            
         
-    </div>
-</li>
+    </nav>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/08/30/My-Introduction/">
-            <time class="dt-published" datetime="2023-08-30T06:58:34.000Z"
-                  itemprop="datePublished">08-30</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/08/30/My-Introduction/">简历(秋招版)</a>
-            
-        
-    </div>
-</li>
 
-                
-            
-            
-                
-    </div></section>
     
-    
-    <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-            <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-            <ul>
-                
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2022/07/31/Nginx-static404/">
-            <time class="dt-published" datetime="2022-07-31T15:06:43.000Z"
-                  itemprop="datePublished">07-31</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2022/07/31/Nginx-static404/">Nginx访问静态资源404</a>
-            
-        
-    </div>
-</li>
+</article>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2022/05/03/RabbitMQ-PriviteLink/">
-            <time class="dt-published" datetime="2022-05-03T01:16:43.000Z"
-                  itemprop="datePublished">05-03</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2022/05/03/RabbitMQ-PriviteLink/">RabbitMQ管理页面不是私密连接解决办法</a>
-            
-        
-    </div>
-</li>
 
-                
-                
-            </ul>
-        </div>
+    <section id="comments" class="vcomment">
+
     </section>
-    
-    </div>
+
+
+
+
+
+
+
 
 
 

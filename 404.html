@@ -25,7 +25,7 @@
     <meta name="description" content="Cra2iTeT的个人网站">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cra2iTeT的个人网站">
-<meta property="og:url" content="http://example.com/404.html">
+<meta property="og:url" content="http://cra2itet.github.io/404.html">
 <meta property="og:site_name" content="Cra2iTeT的个人网站">
 <meta property="og:description" content="Cra2iTeT的个人网站">
 <meta property="og:locale" content="zh_CN">
@@ -126,7 +126,7 @@
                 
             </nav>
             <div id="search-form-wrap">
-                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://cra2itet.github.io"></form>
             </div>
         </div>
     </div>
@@ -162,6 +162,30 @@
 
 
 
+
+    
+<script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
+
+    <script>
+        var GUEST_INFO = ['nick', 'mail', 'link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function (item) {
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        var recordIP = JSON.parse('true');
+        var highlight = JSON.parse('true');
+
+        new Valine({
+            el: '.vcomment',
+            appId: "Kizl1S5iTjdAWwe6wAQ9FTVT-gzGzoHsz",
+            appKey: "XCBrNnNb7MBFEUd72TbDPBu0",
+            placeholder: "欢迎留下你的评论，请留下你的邮箱、网址便于回复",
+            pageSize: '10',
+            avatar: 'monsterid',
+            lang: 'zh-cn',
+            recordIP: recordIP,
+            highlight: highlight
+        });
+    </script>
 
 
 

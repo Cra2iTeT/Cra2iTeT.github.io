@@ -12,7 +12,7 @@
 
     
     <title>
-        归档 |
+        Hexo图片无法显示问题解决 |
         
         Cra2iTeT的个人网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,14 +23,17 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="Cra2iTeT的个人网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cra2iTeT的个人网站">
-<meta property="og:url" content="http://cra2itet.github.io/archives/index.html">
+    <meta name="description" content="使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份&#x2F;月份&#x2F;时间&#x2F;文件名（默认），是在_config.yml中配置的 1permalink: :year&#x2F;:month&#x2F;:day&#x2F;:ti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo图片无法显示问题解决">
+<meta property="og:url" content="http://cra2itet.github.io/2023/09/01/hexo-theme-ruime-img/index.html">
 <meta property="og:site_name" content="Cra2iTeT的个人网站">
-<meta property="og:description" content="Cra2iTeT的个人网站">
+<meta property="og:description" content="使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份&#x2F;月份&#x2F;时间&#x2F;文件名（默认），是在_config.yml中配置的 1permalink: :year&#x2F;:month&#x2F;:day&#x2F;:ti">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-01T07:40:43.000Z">
+<meta property="article:modified_time" content="2023-09-01T07:49:37.660Z">
 <meta property="article:author" content="Cra2iTeT">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" href="/atom.xml" title="Cra2iTeT的个人网站" type="application/atom+xml">
@@ -106,7 +109,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="Hexo图片无法显示问题解决" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -114,7 +117,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>归档</h1></a>
+                        <a href="/" id="logo"><h1>Hexo图片无法显示问题解决</h1></a>
                     
                 
             </div>
@@ -163,142 +166,92 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main">
-    <div class="archives-outer-wrap wow fadeInUp">
-        <div class="tag-wrap">
+                <section id="main"><article id="post-hexo-theme-ruime-img" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date wow slideInLeft">
+    <a href="/2023/09/01/hexo-theme-ruime-img/" class="article-date-link">
+        <time datetime="2023-09-01T07:40:43.000Z"
+              itemprop="datePublished">2023-09-01</time>
+    </a>
+</div>
+
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/简历/">简历</a>
-                </div>
+    <div class="article-category wow slideInLeft">
+        <a class="article-category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a>
+    </div>
+
+
+        </div>
+        <div class="hr-line"></div>
+        
+
+        <div class="e-content article-entry" itemprop="articleBody">
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/RabbitMQ/">RabbitMQ</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Nginx/">Nginx</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Hexo/">Hexo</a>
-                </div>
+                <p>使用Typora编辑的时候能够正确插入图片并显示，但是无论是本地还是云端的网页都无法打开显示。本质原因是Hexo会把markdown转换成html文件，图片就是一个img标签，里面的src地址不对，如果去到Hexo生成的文件中查找就会发现，图片等资源的存储路径为 年份/月份/时间/文件名（默认），是在_config.yml中配置的</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
+<p>最简单的不使用插件的解决方案就是在source中新建一个资源文件夹，存放资源，插入图片是路径地址改成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/你的资源文件夹/图片.png</span><br></pre></td></tr></table></figure>
+
             
         </div>
-        <div class="category-wrap">
+        <footer class="article-footer">
+            <a data-url="http://cra2itet.github.io/2023/09/01/hexo-theme-ruime-img/" data-id="clm0arjl2000c3gkq6ggt9v3o" data-title="Hexo图片无法显示问题解决"
+               class="article-share-link">分享</a>
             
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/个人经历/">个人经历</a>
-                </div>
-            
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/问题解决/">问题解决</a>
-                </div>
-            
-        </div>
-        
-        
+                <a href="/2023/09/01/hexo-theme-ruime-img/#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/2023/09/01/hexo-theme-ruime-img/"
+                          itemprop="commentCount"></span>
+                    留言
+                </a>
             
             
-                
+            
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+        </footer>
+    </div>
     
-    <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-            <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-            <ul>
+        
+    <nav id="article-nav" class="wow fadeInUp">
+        
+        
+            <div class="article-nav-link-wrap article-nav-link-right">
                 
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/09/01/hexo-theme-ruime-img/">
-            <time class="dt-published" datetime="2023-09-01T07:40:43.000Z"
-                  itemprop="datePublished">09-01</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
+                    
+                    
+                        <img data-src="/covers/avatar.png" data-sizes="auto" alt="简历(秋招版)" class="lazyload">
+                    
+                
+                <a href="/2023/08/30/My-Introduction/"></a>
+                <div class="article-nav-caption">后一篇</div>
+                <h3 class="article-nav-title">
+                    
+                        简历(秋招版)
+                    
+                </h3>
+            </div>
         
-            
-                <a class="archive-article-title" href="/2023/09/01/hexo-theme-ruime-img/">Hexo图片无法显示问题解决</a>
-            
-        
-    </div>
-</li>
+    </nav>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/08/30/My-Introduction/">
-            <time class="dt-published" datetime="2023-08-30T06:58:34.000Z"
-                  itemprop="datePublished">08-30</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/08/30/My-Introduction/">简历(秋招版)</a>
-            
-        
-    </div>
-</li>
 
-                
-            
-            
-                
-    </div></section>
     
-    
-    <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-            <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-            <ul>
-                
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2022/07/31/Nginx-static404/">
-            <time class="dt-published" datetime="2022-07-31T15:06:43.000Z"
-                  itemprop="datePublished">07-31</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2022/07/31/Nginx-static404/">Nginx访问静态资源404</a>
-            
-        
-    </div>
-</li>
+</article>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2022/05/03/RabbitMQ-PriviteLink/">
-            <time class="dt-published" datetime="2022-05-03T01:16:43.000Z"
-                  itemprop="datePublished">05-03</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2022/05/03/RabbitMQ-PriviteLink/">RabbitMQ管理页面不是私密连接解决办法</a>
-            
-        
-    </div>
-</li>
 
-                
-                
-            </ul>
-        </div>
+    <section id="comments" class="vcomment">
+
     </section>
-    
-    </div>
+
+
+
+
+
+
+
 
 
 
